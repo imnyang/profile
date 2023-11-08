@@ -20,7 +20,9 @@ header {
     margin-top: 4px;
     width: 340px;
     height: 120px;
-    background-color: pink;
+    background-image: url("../../public/banner.png");
+    background-size: cover; /* 이미지 크기 조정 설정 */
+    background-repeat: no-repeat; /* 이미지 반복 없음 설정 */
     border-radius: 8px 8px 0px 0px;
 }
 
@@ -36,20 +38,29 @@ main {
 
 .DivImageContainer {
     position: relative;
-    width: 80px;
-    height: 80px;
+    width: 85px;
+    height: 85px;
     border-radius: 100%; /* 부모 요소에 border-radius 설정 */
     overflow: hidden;
 }
 
 .DivImage {
-    width: 80px;
-    height: 80px;
+    width: 85px;
+    height: 85px;
     position: absolute;
     z-index: 0;
-    top: 25%;
-    left: 42.5%;
+    margin: 125px;
+    margin-left: 55px;
+    border-radius: 100%; /* 부모 요소에 border-radius 설정 */
     transform: translate(-50%, -50%);
+}
+
+.DivImage img {
+    width: 85px;
+    height: 85px;
+    border-color: #ecedef;
+    border-width: 5px;
+    border-radius: 50%; /* 부모 요소에 border-radius 설정 */
 }
 
 /*60*/
@@ -60,5 +71,8 @@ main {
     }
     main {
         background-color: #242428;
+    }
+    .DivImage img {
+        border-color: #242428;
     }
 }
