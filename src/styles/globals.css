@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'BM-JUA';
+    src: url('https://cdn.jsdelivr.net/gh/wizfile/font/BM-JUA.eot');
+    src:url('https://cdn.jsdelivr.net/gh/wizfile/font/BM-JUA.woff') format('woff');
+    font-style: normal;
+}
+
 html,
 body {
     height: 100%;
@@ -10,6 +17,8 @@ body {
 
 body {
     display: flex;
+    flex-direction: column;
+    color: black;
     align-items: center;
     justify-content: center;
     background-color: #ffffff;
@@ -45,28 +54,91 @@ main {
 }
 
 .DivImage {
-    width: 85px;
-    height: 85px;
+    width: 90px;
+    height: 90px;
     position: absolute;
     z-index: 0;
     margin: 125px;
-    margin-left: 55px;
+    margin-left: 60px;
     border-radius: 100%; /* 부모 요소에 border-radius 설정 */
     transform: translate(-50%, -50%);
 }
 
 .DivImage img {
-    width: 85px;
-    height: 85px;
+    width: 90px;
+    height: 90px;
     border-color: #ecedef;
     border-width: 5px;
     border-radius: 50%; /* 부모 요소에 border-radius 설정 */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-/*60*/
+.UserName {
+    background-color: white;
+    margin-top: 20px;
+    width: calc(100% - 50px);
+    height: calc(67%);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.UserName h1 {
+    width: 100%;
+    text-align: left;
+    font-family: 'BM-JUA';
+    font-size: 25px;
+    padding-bottom: 0px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.Badge {
+    margin-top: 15px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    margin-left: 75%;
+    background-color: white;
+}
+
+.Badge svg {
+    /*남냥 틀딱*/
+    width: 20px;
+    height: 20px;
+}
+.Line {
+    width: 100%;
+    background-color: #E1E2E4;
+    height: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+a {
+    color: #006CE7;
+}
+
+br {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+textarea {
+    background-color: #ffffff00;
+    height: 50px;
+    resize: none;
+    border: none;
+}
 
 @media (prefers-color-scheme: dark) {
     body {
+        color: white;
         background-color: #313338;
     }
     main {
@@ -74,5 +146,11 @@ main {
     }
     .DivImage img {
         border-color: #242428;
+    }
+    .UserName {
+        background-color: #111214;
+    }
+    .Badge {
+        background-color: #111214;
     }
 }
