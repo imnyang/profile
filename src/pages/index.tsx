@@ -1,13 +1,13 @@
 import Image from "next/image";
-import Profile from "@/../public/profile.jpg";
-
+import setting from "@/../profile.config";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
+import crypto from "crypto"
 
 export default function Home() {
   const copyTextToClipboard = () => {
-    const textToCopy = "imnyang";
+    const textToCopy = setting.name;
     navigator.clipboard
       .writeText(textToCopy)
       .then(() => {
@@ -27,11 +27,13 @@ export default function Home() {
       });
   };
 
+  const gravatar = "https://1.gravatar.com/avatar/"+crypto.createHash('sha256').update(setting.gravatar).digest("hex")
+
   return (
     <main>
       <header>
         <div className="DivImage">
-          <Image alt="Profile" src={Profile} />
+          <Image alt="Profile" src={gravatar} />
         </div>
       </header>
       <div className="Badge">
@@ -108,9 +110,9 @@ export default function Home() {
         </Link>
       </div>
       <div className="UserName">
-        <h1 onClick={copyTextToClipboard}>아임냥 👀</h1>
+        <h1 onClick={copyTextToClipboard}>{setting.display_name}</h1>
         <p>imnyang</p>
-        <p className="text-zinc-400">Sqlare와 비행중</p>
+        <p className="text-zinc-400">{setting.pronouns}</p>
         <div className="Line" />
         내 소개
         <br />
@@ -131,7 +133,7 @@ export default function Home() {
         <div className="Line" />
         <p className="text-sm text-slate-400">
           Discord 가입 시기: <br />
-          2022년 8월 11일
+          {setting.signup_time}
         </p>
         <div className="Line" />
         <p className="text-sm text-slate-400">메모</p>
