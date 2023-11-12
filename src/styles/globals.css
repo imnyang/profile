@@ -160,6 +160,12 @@ textarea {
     }
 }
 
+@media only screen and (max-height: 767px) {
+    .mobile-hidden {
+        display: none;
+    }
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         color: white;
