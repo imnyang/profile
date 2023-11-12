@@ -12,16 +12,22 @@
 
 html,
 body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     height: 100%;
     margin: 0;
 }
 
 body {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     color: black;
     align-items: center;
     justify-content: center;
+    width: 100%;
     background-color: #ffffff;
 }
 
@@ -138,6 +144,22 @@ textarea {
     border: none;
 }
 
+.listflex {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 197.91px;
+    background-color: #D7D9DC;
+    border-radius: 7px;
+}
+
+@media only screen and (max-width: 767px) {
+    .mobile-hidden {
+        display: none;
+    }
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         color: white;
@@ -155,4 +177,21 @@ textarea {
     .Badge {
         background-color: #111214;
     }
+    .listflex {
+        background-color: #414249;
+    }
+}
+
+.mainlist {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+img {
+    border-radius: 100%;
 }
