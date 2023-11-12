@@ -164,6 +164,9 @@ textarea {
     .mobile-hidden {
         display: none;
     }
+    main {
+        display: none;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
