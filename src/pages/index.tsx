@@ -295,7 +295,7 @@ export default function Home() {
                 </defs>
               </svg>
             </Link>
-            <Link href="https://github.com/Sqlare/sqlr.kr" className="ml-1">/ sqlr.kr 🔒</Link>
+            <Link href="https://github.com/Sqlare/sqlr.kr" className="ml-1">/ sqlr.kr</Link>
           </div>
           <div className="listflex">
             <Link href="https://imnyang.xyz">
