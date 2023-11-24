@@ -125,7 +125,7 @@ export default function Home() {
             <br />
             <p className="text-sm text-slate-400">
               {`Dis : `}
-              <a href="https://sqlr.kr/imnyang">sqlr.kr/imnyang</a>
+              <a href="https://sqlr.kr/kvGE">sqlr.kr/kvGE</a>
             </p>
             <p className="text-sm text-slate-400">
               {`Mail : `}
